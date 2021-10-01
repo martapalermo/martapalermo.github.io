@@ -1,0 +1,141 @@
+body {
+    margin: 0px;
+}
+
+.name {
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+}
+
+/* css grid */
+.container {
+    display: grid;
+    grid-template-columns: 1 fr; /* 1 fr is 1 fractional unit, 100%*/
+}
+
+/* Navigation Bar styles  */
+.nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f9e5d8;
+}
+
+.left-nav {
+    display: flex;
+}
+
+/* this traverses through a tree of classes 
+all the way from outer to inner */
+.nav-wrap > .left-nav > div {
+    margin-right: 20px;
+    font-size: 1em; /* em is a precentage */
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+}
+
+.nav-link-wrap {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+/* only grab the a links inside the wrappe */
+.nav-link-wrap a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrap:hover {
+    border-bottom: 1px solid black;
+}
+
+/* when hovering, font color changes and line gets added */
+.nav-link-wrap a:hover {
+    color:black;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+
+/* Portfolio style */
+.portfolio-items-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.portfolio-item-wrap {
+    position: relative;
+}
+
+    /* styles cover and image related items */
+.portfolio-img-background {
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrap {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.img-text-wrap {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.img-text-wrap .subtitle {
+    transition: 1s;
+    color: transparent;
+    font-weight: 600;
+}    
+
+.img-text-wrap:hover .subtitle {
+    font-weight: 600;
+    color: aqua;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+/* ABOUT PAGE STYLES */
+
+.two-column-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-img-wrap img {
+    width: 100%;
+    padding: 5px;
+}
+
+.profile-content-wrap {
+    padding: 30px;
+}
+
+.profile-content-wrap h1 {
+    color: #c97c5d;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+

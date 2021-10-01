@@ -1,48 +1,52 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            .grid {
-                display: grid;
-                grid-template-columns: 1fr 4fr 1fr;
-                grid-template-rows: 1fr 4fr 1fr;
-                grid-gap: 5px;
-            }
+<head>
+    <meta charset="utf-8" />
+    <title>Marta's Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
-            .grid > * {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .header, .footer {
-               font-family: 'arial narrow';
-               color: aliceblue;
-               grid-column: 1 / 4;
-               background: rgb(59, 59, 180);
-            }
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrap">
+            <div class="left-nav">
+                <div class="nav-link-wrap active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
 
-            .rsidebar, .content, .lsidebar {
-                background: lightskyblue;
-            }
-
-        </style>
-    </head>
-    
-    <body>
-        <div class="grid">
-            <div class="header">
-            <h1>Marta's Website</h1>
+                <div class="nav-link-wrap">
+                    <a href="about.html">About</a>
+                </div>
             </div>
-            
-            <div class="rsidebar"></div>
-            
-            <div class="content">
 
+            <div class="right-nav">
+                <div class="name">
+                    <div>MARTA PALERMO</div>
+                </div>
             </div>
-            
-            <div class="lsidebar"></div>
-            
-            <div class="footer"></div>
         </div>
-    </body>
+
+        <!-- main wrap holds everything underneath nav bar -->
+       <div class="main-wrap"> 
+           <!-- portfolio items wrap holds all  -->
+           <div class="portfolio-items-wrap">
+
+                <div class="portfolio-item-wrap">
+                    <div class="portfolio-img-background" style="background-image:url(images/navigli_notte.jpg);">
+                    </div>
+
+                    <div class="img-text-wrap">
+                        <div class="subtitle">
+                            Image 2n 
+                        </div>
+                    </div>
+                </div>
+
+                
+           </div>
+       </div>
+
+    </div>
+</body>
 </html>
