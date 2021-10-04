@@ -1,10 +1,17 @@
 body {
     margin: 0px;
+    font-family: "Lato", sans-serif;;
 }
 
 .name {
     font-family: "Lato", sans-serif;
     font-size: 15px;
+}
+
+.footer {
+    color: #c97c5d;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 10px;
 }
 
 /* css grid */
@@ -68,6 +75,7 @@ all the way from outer to inner */
 .portfolio-items-wrap {
     display: grid;
     grid-template-columns: 1fr;
+    height: auto;
 }
 
 .portfolio-item-wrap {
@@ -107,6 +115,7 @@ all the way from outer to inner */
     font-weight: 600;
 }    
 
+/* needs to be more specific with selector */
 .img-text-wrap:hover .subtitle {
     font-weight: 600;
     color: aqua;
@@ -130,12 +139,50 @@ all the way from outer to inner */
 }
 
 .profile-content-wrap {
-    padding: 30px;
+    padding-left: 25px;
+    padding-right: 5px;
 }
 
 .profile-content-wrap h1 {
     color: #c97c5d;
     font-family: "Bebas Neue", sans-serif;
 }
+
+/* STYLING FOR PROJECTS */
+.image-grid {
+    /* --gap: 16px; */
+    /* --num-cols: 4; */
+    /* --row-height: 300px; */
+
+    box-sizing: border-box;
+    padding-top: 15px;
+
+    display: grid;
+    grid-template-columns: rep(4, 1fr);
+    grid-auto-rows: 300px;
+    gap: 16px;
+}
+
+.image-grid > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+}
+
+/* anything under 1024 px */
+/* @media screen and (max-width: 1024px) {
+    .image-grid {
+        grid-template-columns: rep(4, 1fr);
+        grid-auto-rows: 200px;
+    }
+} */
 
 
