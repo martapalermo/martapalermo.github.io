@@ -31,7 +31,7 @@ footer {
 }
 
 .title-link {
-    font-size: 25px;
+    font-size: 29px;
 }
 
 .caption {
@@ -185,7 +185,7 @@ all the way from outer to inner */
 
     .title-link {
         transition: font-size ease-in-out 0.8s;
-        font-size: small;
+        font-size: 18px;
     }
     
     .nav-wrap {
