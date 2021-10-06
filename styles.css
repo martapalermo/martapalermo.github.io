@@ -3,22 +3,45 @@ body {
     font-family: "Lato", sans-serif;;
 }
 
+footer {
+    position:relative;
+    font-family: "Lato", sans-serif;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-color: #f9e5d8;;
+	color: #8a8a8a;
+	text-align: center;
+}
+
+.footer-special {
+    position:fixed;
+    font-family: "Lato", sans-serif;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-color: #f9e5d8;;
+	color: #8a8a8a;
+	text-align: center;
+}
+
 .name {
     font-family: "Lato", sans-serif;
     font-size: 15px;
 }
 
-.footer {
+.caption {
     color: #c97c5d;
     font-family: "Lato", sans-serif;
     font-size: 10px;
     padding-left: 40px;
 }
 
+
 /* css grid */
 .container {
     display: grid;
-    grid-template-columns: 1 fr; /* 1 fr is 1 fractional unit, 100%*/
+    grid-template-columns: 1 fr; 
 }
 
 /* Navigation Bar styles  */
@@ -55,17 +78,14 @@ all the way from outer to inner */
     transition: color 0.5s;
 }
 
-.nav-link-wrap:hover {
+.nav-link-wrap a:active {
     border-bottom: 1px solid black;
+    color: black;
 }
 
 /* when hovering, font color changes and line gets added */
 .nav-link-wrap a:hover {
     color:black;
-}
-
-.active-nav-link {
-    border-bottom: 1px solid black;
 }
 
 .active-nav-link a {
@@ -101,8 +121,8 @@ all the way from outer to inner */
     align-items: center;
     height: 100%;
     text-align: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 25%;
+    /* padding-right: 100px; */
 }
 
 .img-text-wrap {
@@ -116,10 +136,12 @@ all the way from outer to inner */
     font-weight: 600;
 }    
 
+
 /* needs to be more specific with selector */
 .img-text-wrap:hover .subtitle {
-    font-weight: 600;
-    color: aqua;
+    font-size: 50px;
+    color: whitesmoke;
+    font-family: "Lato", sans-serif;
 }
 
 .img-darken {
@@ -141,7 +163,8 @@ all the way from outer to inner */
 
 .profile-content-wrap {
     padding-left: 25px;
-    padding-right: 5px;
+    padding-right: 25px;
+
 }
 
 .profile-content-wrap h1 {
@@ -149,19 +172,59 @@ all the way from outer to inner */
     font-family: "Bebas Neue", sans-serif;
 }
 
+/* screen size rendition */
+@media screen and (max-width: 600px) {
+    .profile-content-wrap h1 {
+        transition: font-size ease-in-out 0.5s;
+        font-size: 20px;
+    }
+
+    .nav-wrap {
+        transition: padding ease-in-out 0.8s;
+        padding: 18px;
+    }
+    
+    .nav-link-wrap a, .name {
+        transition: font-size ease-in-out 0.8s;
+        font-size: small;
+    }
+
+    body {
+        transition: font-size ease-in-out 0.8s;
+        font-size: smaller;
+    }
+
+    video {
+        transition: width ease-in-out 0.8s, height ease-in-out 0.8s;
+        width: 300px;
+        height: 300px;
+    }
+
+}
+
 /* STYLING FOR PROJECTS */
 .image-grid {
-    /* --gap: 16px; */
-    /* --num-cols: 4; */
-    /* --row-height: 300px; */
-
     box-sizing: border-box;
     padding-top: 15px;
-
+    padding-bottom: 15px;
+    
     display: grid;
     grid-template-columns: rep(4, 1fr);
     grid-auto-rows: 300px;
-    gap: 16px;
+    gap: 15px;
+}
+
+/* .image-grid:hover .subtitle {
+    font-size: 15px;
+    color: aqua;
+    font-family: "Lato", sans-serif;
+} */
+
+@media screen and (max-width: 1024px) {
+    .image-grid {
+        grid-template-columns: rep(1, 1fr);
+        grid-auto-rows: 200px;
+    }
 }
 
 .image-grid > img {
@@ -178,12 +241,59 @@ all the way from outer to inner */
     grid-row: span 2;
 }
 
-/* anything under 1024 px */
-/* @media screen and (max-width: 1024px) {
-    .image-grid {
-        grid-template-columns: rep(4, 1fr);
-        grid-auto-rows: 200px;
-    }
+/* STYLING FOR HOVER OVER IMAGE CAPTION */
+
+/* .image-grid img:hover {
+    opacity: 50%;
+    transition: opacity 0.8s;
+    content: counter(title);
 } */
+
+.text-container {
+    position: relative;
+    width: auto;
+}
+
+.image {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+} 
+
+/* .image-long {
+    grid-column: span 2;
+    grid-row: span 2;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+} */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #eeb1a8;
+}
+
+.text-container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
 
 
