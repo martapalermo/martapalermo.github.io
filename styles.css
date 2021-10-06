@@ -6,23 +6,23 @@ body {
 footer {
     position:relative;
     font-family: "Lato", sans-serif;
-	width: 100%;
-	left: 0;
-	bottom: 0;
-	background-color: #f9e5d8;;
-	color: #8a8a8a;
-	text-align: center;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #f9e5d8;;
+    color: #8a8a8a;
+    text-align: center;
 }
 
 .footer-special {
     position:fixed;
     font-family: "Lato", sans-serif;
-	width: 100%;
-	left: 0;
-	bottom: 0;
-	background-color: #f9e5d8;;
-	color: #8a8a8a;
-	text-align: center;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #f9e5d8;;
+    color: #8a8a8a;
+    text-align: center;
 }
 
 .name {
