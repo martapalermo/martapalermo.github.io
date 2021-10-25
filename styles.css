@@ -50,7 +50,6 @@ footer {
 
 /* Navigation Bar styles  */
 .nav-wrap {
-    position:fixed;
     display: flex;
     justify-content: space-between;
     padding: 40px;
@@ -58,7 +57,6 @@ footer {
 }
 
 .left-nav {
-    position:fixed;
     display: flex;
 }
 
