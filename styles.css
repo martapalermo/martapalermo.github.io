@@ -48,10 +48,10 @@ footer {
     grid-template-columns: 1 fr; 
 }
 
-.youtube-container {
+/* .youtube-container {
     width: 500px;
     height: 400px;
-}
+} */
 
 /* Navigation Bar styles  */
 .nav-wrap {
